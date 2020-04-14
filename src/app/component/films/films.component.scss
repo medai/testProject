@@ -1,0 +1,149 @@
+
+:host {
+  display: block;
+  max-width: 1000px;
+}
+
+
+.table-row, .table-header {
+  display: flex;
+}
+
+.table-row {
+  padding: 5px 5px 15px 5px;
+}
+
+.table-header {
+  background: #934CD6;
+  color: #fff;
+  .label {
+    text-align: center;
+  }
+  .icon {
+    width: 10%;
+    text-align: right;
+  }
+}
+
+.table-cell {
+  flex-basis: 25%;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.genre {
+  padding: 3px 7px;
+  border-radius: 20px;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.genre-container {
+  display: flex;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  background: #F2994A;
+  color: white;
+  flex-basis: 32%;
+  padding: 5px;
+
+  &::placeholder {
+    color: white;
+  }
+}
+
+.sort-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.header-cell {
+  padding: 5px 10px 5px 5px;
+  display: flex;
+  justify-content: space-between;
+
+  .arrow {
+    cursor: pointer;
+
+    &:hover {
+      color: #F2EAFA;
+    }
+  }
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-size-container {
+  justify-self: flex-end;
+}
+
+.size-item {
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 15px;
+
+  &.active-page-size {
+    background: #F2994A;
+    color: white;
+  }
+
+}
+
+::ng-deep {
+  .page-link {
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: black;
+    margin: 0 5px;
+  }
+
+  .page-item.active .page-link {
+    background: #F2994A;
+    border-color: #F2994A;
+  }
+
+  .page-item.disabled .page-link {
+    border: none;
+    background: none;
+  }
+
+  .page-item:last-child, .page-item:first-child  {
+    .page-link {
+      border-radius: 50%;
+    }
+  }
+
+  .pagination {
+    margin-bottom: 0;
+  }
+}
+
+.table-body {
+  background-color: white;
+  margin-bottom: 10px;
+  .name {
+    font-weight: bold;
+  }
+}
